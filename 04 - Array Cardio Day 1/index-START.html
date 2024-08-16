@@ -78,6 +78,17 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const epic = data.reduce(function (obj,currentVal) {
+      if (!obj[currentVal]){
+        obj[currentVal] = 1;
+      } else {
+        obj[currentVal]++;
+      }
+      return obj
+    }, {})
+
+    console.log(epic);
+
   </script>
 </body>
 </html>
